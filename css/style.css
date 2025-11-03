@@ -1,7 +1,42 @@
-
-
-#inicial{
+#inicial {
     background-image: url("../assets/images/banner-initial.png");
-    height:70vh;
-    z-index: -1;
+    height: 70vh;
+    background-size: cover;
+    position: relative;
+
 }
+
+#inicial .conteudo-inicial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+#inicial .conteudo-inicial a {
+    background-color: var(--bs-danger);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.1s;
+    font-size: 25px;
+}
+
+#inicial .conteudo-inicial a:hover {
+    background-color: #ba3434;
+}
+
+#inicial h1 {
+    font-weight: 700;
+    font-size: 100px;
+}
+
+#inicial h3 {
+    font-size: 30px;
+}
+
