@@ -1,0 +1,7 @@
+
+
+#inicial{
+    background-image: url("../assets/images/banner-initial.png");
+    height:70vh;
+    z-index: -1;
+}
