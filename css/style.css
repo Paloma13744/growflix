@@ -1,3 +1,8 @@
+:root{
+  --cinza-escuro: #424141;
+}
+
+
 #inicial {
   background-image: url("../assets/images/banner-initial.png");
   background-size: cover;
@@ -18,6 +23,98 @@
   padding: 20px;
   z-index: 2;
 }
+
+#perguntas_frequentes{
+  height: 80vh;
+}
+
+.collapse-home{
+  background: var(--cinza-escuro);
+  font-size: 30px;
+}
+
+#perguntas_frequentes h1{
+  font-size: 50px;
+  font-weight: 700;
+}
+
+#perguntas_frequentes .accordion{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+#perguntas_frequentes .accordion-button{
+  background-color: #333;
+  border: none;
+  font-size: 28px;
+  padding: 25px 20px;
+}
+
+#perguntas_frequentes .accordion-button::after{
+  filter: invert(1);
+}
+
+#perguntas_frequentes .accordion-item{
+  border: none;
+  border-bottom: 1px solid #555;
+  background-color: transparent;
+}
+
+#perguntas_frequentes .accordion-body{
+  background-color: #ffffff;
+  color: rgb(6, 6, 6);
+  font-size: 20px;
+}
+
+
+#home {
+  background-image: url("../assets/images/growcast-01.png");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  position: relative;
+  color: white;
+
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-xl-custom {
+  max-width: 90%;
+  width: 100%;
+}
+
+.group .hover-opacity-100 {
+  transition: opacity 0.3s ease;
+}
+
+.group:hover .hover-opacity-100 {
+  opacity: 1 !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
   #inicial h1 {
