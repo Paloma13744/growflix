@@ -24,57 +24,62 @@
             </div>
         </nav>
 
-        <div class="position-absolute top-50 start-0 translate-middle-y text-white ps-5" style="z-index: 5;">
+        <div class="position-absolute translate-middle-y text-white d-flex flex-column align-items-start"
+            style="top: 70%; left: 15%; z-index: 5;">
             <h6 class="fw-bold">PODCAST</h6>
             <h1 class="display-2 fw-bold">GROWCAST</h1>
-            <button type="button" class="btn btn-light fw-semibold mt-3" data-bs-toggle="modal"
-                data-bs-target="#videoModal" data-video="https://www.youtube.com/embed/7OWT3lfHYvE">
-                Assistir
+            <button type="button" class="btn btn-light fw-bold mt-3 fs-5"
+                onclick="openMovieFromButton('https://www.youtube.com/embed/7OWT3lfHYvE')">
+                <i class="bi bi-play-fill me-1 fs-5 fw-bold"></i> <span class="fw-bold">🞂</span> Assistir
             </button>
         </div>
+
     </section>
 
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal fade" id="movie-modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-xl-custom">
-          <div class="modal-content bg-black border-0">
-            <div class="modal-header border-0">
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content bg-black border-0">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9" id="iframe-movie"></div>
+                </div>
             </div>
-            <div class="modal-body p-0">
-              <div class="ratio ratio-16x9">
-                <iframe id="videoFrame" src="" title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
 
 
-      <section id="growcast-items" class="py-5">
+    <section class="py-5">
         <div class="container">
-          <h3 class="fw-bold text-white mb-4">Growcast [Episódios]</h3>
-          <div class="row g-4" id="growcast-row"></div>
+            <h3 class="fw-bold text-white mb-4">Growcast [Episódios] <span class="px-2">🞂</span> </h3>
+            <div class="row g-4" id="growcast-items"></div>
         </div>
-      </section>
-
-
-    <section id="webinar-items">
-        <h3 class="fw-bold text-white mt-4 px-3">Webinar em Flutter</h3>
-
     </section>
 
-    <section id="uxUi-items">
-        <h3 class="fw-bold text-white mt-4 px-3">Jornada UX/UI </h3>
 
+    <section class="py-5">
+        <div class="container">
+            <h3 class="fw-bold text-white mb-4">Webinar em Flutter <span class="px-2">🞂</span> </h3>
+            <div class="row g-4" id="webinar-items"></div>
+        </div>
     </section>
 
-    <section id="diversos-items">
-        <h3 class="fw-bold text-white mt-4 px-3">Diversos</h3>
+    <section class="py-5">
+        <div class="container">
+            <h3 class="fw-bold text-white mb-4">Jornada UX/UI <span class="px-2">🞂</span> </h3>
+            <div class="row g-4" id="uxUi-items"></div>
+        </div>
     </section>
 
+
+    <section class="py-5">
+        <div class="container">
+            <h3 class="fw-bold text-white mb-4">Diversos <span class="px-2">🞂</span></h3>
+            <div class="row g-4" id="diversos-items"></div>
+        </div>
+    </section>
 
 
 
