@@ -92,28 +92,43 @@
 }
 
 .group:hover .hover-opacity-100 {
-  opacity: 1 !important;
+  opacity: 1 
 
 }
 
+.col-movie {
+  display: flex;
+  justify-content: center;
+}
 
+.col-movie .item-hover {
+  width: 100%;
+  max-width: 400px; 
+  transition: transform 0.2s ease-in-out;
+}
 
+.col-movie .item-hover:hover {
+  transform: scale(1.02);
+}
 
+.col-movie img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
+.item-hover .detail-movie {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none; 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.item-hover:hover .detail-movie {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; 
+}
 
 
 @media (max-width: 768px) {
