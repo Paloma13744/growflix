@@ -1,219 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet"
-      href="./assets/libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <title>Growflix - Todos os vídeos da GrowDev</title>
+    <link rel="stylesheet" href="./assets/libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
-  </head>
+</head>
 
-  <body>
+<body class="bg-black">
+    <section id="home" class="position-relative">
+        <nav class="d-flex align-items-center gap-4 position-absolute top-0 start-0 px-5 py-3 w-100"
+            style="z-index: 10;">
+            <img src="./assets/images/logo-growflix.svg" alt="Logo Growflix" style="width: 120px;" />
 
-    <section id="inicial" class="container-fluid position-relative">
-      <img src="./assets/images/logo-growflix.svg"
-        alt="Logo Growflix"
-        class="img-fluid position-absolute top-0 start-0 mt-3 ms-4"
-        style="width: 120px; z-index: 10;" />
+            <div class="d-flex gap-4 ms-4 fs-5">
+                <a href="./index.html" class="nav-link text-white fw-semibold active">Início</a>
+                <a href="#growcast-items" class="nav-link text-white">Growcast[episódios]</a>
+                <a href="#webinar-items" class="nav-link text-white">Webinar em Flutter</a>
+                <a href="#uxUi-items" class="nav-link text-white">Jornada UX/UI</a>
+                <a href="#diversos-items" class="nav-link text-white">Diversos</a>
+            </div>
+        </nav>
 
-      <div
-        class="conteudo-inicial d-flex flex-column justify-content-center align-items-center text-center">
-        <h1 class="text-light display-3 fw-bold">Growcasts, webinars e</h1>
-        <h1 class="text-light display-3 fw-bold mb-4">muito mais. Sem
-          limites.</h1>
-
-        <h3 class="text-light fs-3 mb-3">Assista onde quiser</h3>
-        <p class="text-light fs-4 mb-4">Pronto para assistir?</p>
-
-        <a href="index.html"
-          class="btn btn-danger btn-lg px-5 py-3 fs-5 fw-bold">Vamos lá!</a>
-      </div>
+        <div class="position-absolute top-50 start-0 translate-middle-y text-white ps-5" style="z-index: 5;">
+            <h6 class="fw-bold">PODCAST</h6>
+            <h1 class="display-2 fw-bold">GROWCAST</h1>
+            <button type="button" class="btn btn-light fw-semibold mt-3" data-bs-toggle="modal"
+                data-bs-target="#videoModal" data-video="https://www.youtube.com/embed/7OWT3lfHYvE">
+                Assistir
+            </button>
+        </div>
     </section>
 
-    <section id="aproveite_tv" class="bg-black text-white py-5">
-      <div class="container">
-        <div class="row align-items-center">
-
-          <div class="col-md-6">
-            <h3 class="display-6 fw-bold">Aproveite na TV.</h3>
-            <p class="fs-5">
-              Assista em Smart TVs,<br>
-              PlayStation, Xbox, Chromecast<br>
-              e outros dispositivos.
-            </p>
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl-custom">
+          <div class="modal-content bg-black border-0">
+            <div class="modal-header border-0">
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+              <div class="ratio ratio-16x9">
+                <iframe id="videoFrame" src="" title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
-
-          <div class="col-md-6 text-center">
-            <img src="./assets/images/tela-tv-dia-dev.png"
-              alt="TV Growdev"
-              class="img-fluid" style="max-height: 250px;">
-          </div>
-
         </div>
       </div>
 
+
+
+      <section id="growcast-items" class="py-5">
+        <div class="container">
+          <h3 class="fw-bold text-white mb-4">Growcast [Episódios]</h3>
+          <div class="row g-4" id="growcast-row"></div>
+        </div>
+      </section>
+
+
+    <section id="webinar-items">
+        <h3 class="fw-bold text-white mt-4 px-3">Webinar em Flutter</h3>
+
     </section>
+
+    <section id="uxUi-items">
+        <h3 class="fw-bold text-white mt-4 px-3">Jornada UX/UI </h3>
+
+    </section>
+
+    <section id="diversos-items">
+        <h3 class="fw-bold text-white mt-4 px-3">Diversos</h3>
+    </section>
+
+
+
 
     <hr class="border-white opacity-100 my-0">
 
-    <section id="assista" class="bg-black text-white py-5">
-      <div class="container">
-        <div class="row align-items-center">
+    <footer class="footer bg-black text-secondary py-5">
+        <div class="container">
+            <h3 class="text-start mb-5 fs-5">Dúvidas? Ligue 0800 591 8942</h3>
 
-          <div class="col-md-6 text-center mb-4 mb-md-0">
-            <img src="./assets/images/devices.png" alt="Dispositivos"
-              class="img-fluid" style="max-height: 300px;">
-          </div>
+            <div class="row text-center text-md-start mb-4">
+                <div class="col-6 col-md-3 mb-3">
+                    <p>Perguntas frequentes</p>
+                    <p>Relações com investidores</p>
+                    <p>Formas de assistir</p>
+                    <p>Informações corporativas</p>
+                    <p>Só na Growflix</p>
+                </div>
 
-          <div class="col-md-6 text-md-end">
-            <h3 class="display-6 fw-bold">Assista quando quiser.</h3>
-            <p class="fs-5">
-              Assista no celular, tablet, Smart TV ou<br>
-              notebook sem pagar a mais por isso.
-            </p>
-          </div>
+                <div class="col-6 col-md-3 mb-3">
+                    <p>Central de Ajuda</p>
+                    <p>Carreiras</p>
+                    <p>Termos de uso</p>
+                    <p>Entre em contato</p>
+                </div>
 
-        </div>
-      </div>
-    </section>
+                <div class="col-6 col-md-3 mb-3">
+                    <p>Conta</p>
+                    <p>Resgatar cartão pré-pago</p>
+                    <p>Privacidade</p>
+                    <p>Teste de velocidade</p>
+                </div>
 
-    <section id="perguntas_frequentes">
-      <h1>Perguntas frequentes</h1>
-
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button"
-              data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="true" aria-controls="collapseOne">
-              O que é a Growflix?
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show"
-            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+                <div class="col-6 col-md-3 mb-3">
+                    <p>Media Center</p>
+                    <p>Comprar cartão pré-pago</p>
+                    <p>Preferências de cookies</p>
+                    <p>Avisos legais</p>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button"
-              data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-              aria-expanded="false" aria-controls="collapseTwo">
-              Quanto custa a Growflix ?
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse"
-            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+
+            <div class="text-start text-secondary fs-5">
+                Growflix Growdev
             </div>
-          </div>
         </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button"
-              data-bs-toggle="collapse" data-bs-target="#collapseThree"
-              aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse"
-            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-
-         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button"
-              data-bs-toggle="collapse" data-bs-target="#collapseThree"
-              aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse"
-            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-
-
-         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button"
-              data-bs-toggle="collapse" data-bs-target="#collapseThree"
-              aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse"
-            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-
-
-
-
-      </div>
-
-    </section>
-
-    <footer>
-      <h3>Dúvidas? Ligue 0800 591 8942</h3>
-      <div class="cards">
-
-      </div>
     </footer>
 
-    <script
-      src="./assets/libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+
+
+
+
+    <script src="./assets/libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/script.js"></script>
+
+</body>
 
 </html>
